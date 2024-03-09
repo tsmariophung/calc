@@ -77,7 +77,7 @@ export default function Home() {
             <button 
               key="C"
               onClick={() => handleKeyPress('C')}
-              className="text-4xl bg-red-500 border-b-2 border-gray-400 text-white hover:bg-red-600 p-2 rounded-lg">
+              className="text-4xl bg-red-400 border-b-2 border-red-700 text-white hover:bg-red-500 p-2 rounded-lg">
               C
             </button>
             {row1.map((btn) => (
@@ -150,7 +150,7 @@ export default function Home() {
             <button 
               key="="
               onClick={() => handleKeyPress('=')}
-              className="operator">
+              className="text-4xl bg-green-400 border-b-2 border-green-600 text-white hover:bg-green-500 p-2 rounded-lg">
               =
             </button>
           </section>

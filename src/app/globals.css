@@ -32,7 +32,7 @@ body {
 
 @layer components {
   .operator {
-    @apply text-4xl bg-gray-400 border-b-2 border-gray-400 p-2 rounded-lg
+    @apply text-4xl bg-gray-400 border-b-2 border-gray-500 p-2 rounded-lg font-bold
   }
   
   .operator:hover {
@@ -40,7 +40,7 @@ body {
   }
 
   .number {
-    @apply text-4xl bg-gray-300 border-b-2 border-gray-400 p-2 rounded-lg
+    @apply text-4xl bg-gray-300 border-b-2 border-gray-400 p-2 rounded-lg font-bold
   }
 
   .number:hover {
