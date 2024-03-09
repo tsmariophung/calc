@@ -15,7 +15,7 @@ $ cd calc
 $ npm install
 
 # Lancer l'application
-$ npm start
+$ npm run dev
 ```
 
 Ouvrir http://localhost:3000 avec votre navigateur de recherche pour les résultats.
