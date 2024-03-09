@@ -6,7 +6,7 @@ Pour cloner et exécuter cette application, Git et Node.js sont requis.
 
 ```bash
 # Cloner le dépot git
-$ git clone
+$ git clone https://github.com/tsmariophung/calc.git
 
 # Aller dans le dépot
 $ cd calc
