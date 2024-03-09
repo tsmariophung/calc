@@ -20,5 +20,8 @@ $ npm start
 
 Ouvrir http://localhost:3000 avec votre navigateur de recherche pour les résultats.
 
+ou
+
+visiter le lien suivant : https://calculator-f6qzy07s2-tsmariophungs-projects.vercel.app/
 
 ## Sources de références
