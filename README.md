@@ -25,3 +25,13 @@ ou
 visiter le lien suivant : https://calculator-ochre-iota.vercel.app/
 
 ## Sources de références
+
+```bash
+
+# Pour la base de l'application
+https://youtu.be/ihbQ6ytNdpw
+
+# Pour le CSS
+https://github.com/amendezm/calculator-app
+
+```
