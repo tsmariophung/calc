@@ -22,6 +22,6 @@ Ouvrir http://localhost:3000 avec votre navigateur de recherche pour les résult
 
 ou
 
-visiter le lien suivant : https://calculator-f6qzy07s2-tsmariophungs-projects.vercel.app/
+visiter le lien suivant : https://calculator-ochre-iota.vercel.app/
 
 ## Sources de références
