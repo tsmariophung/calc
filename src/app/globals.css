@@ -46,4 +46,5 @@ body {
   .number:hover {
     @apply bg-gray-400
   }
+
 }

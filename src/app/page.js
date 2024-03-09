@@ -71,7 +71,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col flex-wrap bg-white rounded-lg shadow-lg">
-          <section className="h-[55vh] min-h-[340px] max-h-[480px] grid grid-cols-4 gap-4 sm:gap-[2.5vh] md:flex-1 p-2 sm:p-6 bg-skin-keypad w-full rounded-xl">
+          <section className="flex-0 h-[55vh] min-h-[340px] max-h-[480px] grid grid-cols-4 gap-4 sm:gap-[2.5vh] xs:flex-1 p-2 sm:p-6 bg-skin-keypad w-full rounded-xl">
 
 
             <button 
@@ -138,6 +138,12 @@ export default function Home() {
               +
             </button>
 
+            <button 
+              key="+/-"
+              onClick={() => handleKeyPress('+/-')}
+              className="text-base md:text-4xl bg-gray-300 border-b-2 border-gray-400 p-2 rounded-lg font-bold">
+              +/-
+            </button>
             {keys.map((btn) => (
               <button
                 key={btn}
