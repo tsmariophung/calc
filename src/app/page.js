@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { keys } from "../../constant";
+import { keys, row1, row2, row3, row4 } from "../../constant";
 
 export default function Home() {
   const [result, setResult] = useState('');
@@ -27,8 +27,12 @@ export default function Home() {
         return newValue
       })
     } else if (value === '+/-') {
-      const invertResult = eval(expression).toString() * -1
-      setExpression(invertResult);
+      try {
+        const invertResult = eval(expression).toString() * -1
+        setExpression(invertResult);
+      } catch (error) {
+        setResult('Add number first');
+      }
     } else if (value === '%') {
       try {
         const percentResult = eval(expression).toString() / 100
@@ -48,7 +52,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col min-h-screen items-center p-6">
-      <h1 className="text-3xl mb-8">Calculator</h1>
+      <h1 className="text-3xl text-white mb-8">Calculator</h1>
 
       <section>
         <div className="flex flex-col mb-4 bg-white items-center rounded-lg justify-end shadow-lg">
@@ -68,15 +72,87 @@ export default function Home() {
 
         <div className="flex flex-col bg-white rounded-lg shadow-lg">
           <section className="h-[55vh] min-h-[340px] max-h-[480px] grid grid-cols-4 gap-4 sm:gap-[2.5vh] p-2 sm:p-6 bg-skin-keypad w-full rounded-xl">
-            {keys.map((btn) => (
+
+
+            <button 
+              key="C"
+              onClick={() => handleKeyPress('C')}
+              className="text-4xl bg-red-500 border-b-2 border-gray-400 text-white hover:bg-red-600 p-2 rounded-lg">
+              C
+            </button>
+            {row1.map((btn) => (
               <button
                 key={btn}
                 onClick={() => handleKeyPress(btn)}
-                className="text-4xl bg-gray-300 border-b-2 border-gray-400 hover:bg-gray-400 p-2 rounded-lg"
+                className="operator"
               >
                 { btn }
               </button>
             ))}
+
+            {row2.map((btn) => (
+              <button
+                key={btn}
+                onClick={() => handleKeyPress(btn)}
+                className="number"
+              >
+                { btn }
+              </button>
+            ))}
+            <button 
+              key="x"
+              onClick={() => handleKeyPress('x')}
+              className="operator">
+              x
+            </button>
+
+            {row3.map((btn) => (
+              <button
+                key={btn}
+                onClick={() => handleKeyPress(btn)}
+                className="number"
+              >
+                { btn }
+              </button>
+            ))}
+            <button 
+              key="-"
+              onClick={() => handleKeyPress('-')}
+              className="operator">
+              -
+            </button>
+
+            {row4.map((btn) => (
+              <button
+                key={btn}
+                onClick={() => handleKeyPress(btn)}
+                className="number"
+              >
+                { btn }
+              </button>
+            ))}
+            <button 
+              key="+"
+              onClick={() => handleKeyPress('+')}
+              className="operator">
+              +
+            </button>
+
+            {keys.map((btn) => (
+              <button
+                key={btn}
+                onClick={() => handleKeyPress(btn)}
+                className="number"
+              >
+                { btn }
+              </button>
+            ))}
+            <button 
+              key="="
+              onClick={() => handleKeyPress('=')}
+              className="operator">
+              =
+            </button>
           </section>
         </div>
       </section>

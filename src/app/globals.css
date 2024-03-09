@@ -4,8 +4,8 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 17, 24, 39;
 }
 
 body {
@@ -21,5 +21,29 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  main {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+}
+
+@layer components {
+  .operator {
+    @apply text-4xl bg-gray-400 border-b-2 border-gray-400 p-2 rounded-lg
+  }
+  
+  .operator:hover {
+    @apply bg-gray-500
+  }
+
+  .number {
+    @apply text-4xl bg-gray-300 border-b-2 border-gray-400 p-2 rounded-lg
+  }
+
+  .number:hover {
+    @apply bg-gray-400
   }
 }
